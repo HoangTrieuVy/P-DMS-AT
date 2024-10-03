@@ -23,11 +23,7 @@ pip install -r requirements.txt  # install
 <summary>Denoisers</summary>
 Denoising with discrete Mumford-Shah functional:
 
-```math
-\begin{equation}
- \min_{x,e} \frac{1}{2} \Vert A x - z \Vert_2^2 + \beta \Vert (1-e)\odot Dx \Vert_2^2 + \lambda h(e)
-\end{equation}
-```
+$$\min_{x,e} \frac{1}{2} \Vert A x - z \Vert_2^2 + \beta \Vert (1-e)\odot Dx \Vert_2^2 + \lambda h(e)$$
 
  
  Remarks:
