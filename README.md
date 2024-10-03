@@ -54,86 +54,11 @@ optional arguments:
 ```bash
 cd examples
 
-python dms_denoiser.py --z 10081_noisy.jpg
+python dms_denoiser.py --z ..\notebooks\10081_noisy.jpg --algo SLPAM  --b 4 --l 1e-2 
 
-python dms_denoiser.py --z 10081_noisy.jpg  --algo PALM --norm AT --b 4 --l 1e-2 --eps 0.02
+python dms_denoiser.py --z ..\notebooks\10081_noisy.jpg  --algo SLPAM--norm AT --b 4 --l 1e-2 --eps 0.02 --eps_AT_min 0.002
 
-python dms_denoiser.py --z 10081_noisy.jpg  --algo PALM-eps-descent --norm AT --b 4 --l 3e-3 --eps 0.02 --eps_AT_min 0.002
+python dms_denoiser.py --z ..\notebooks\10081_noisy.jpg  --algo SLPAMeps-descent --norm AT --b 4 --l 3e-3 --eps 0.02 --eps_AT_min 0.002
 
  ```
   
- 
-<img align="center" width="1500" src="https://github.com/HoangTrieuVy/GGS-DMS/blob/main/examples/results_SLPAM_l1_10081_noisy.jpg" >
-
-</details>
-
-
-
-
-## <div align="center">Reproducing IEEE SPL results </div>
-
-<details open>
-<summary>Comparison of several DMS strategies on a synthetic noisy image degraded with white Gaussian noise </summary>
- 
-Running [DMS with different schemes](https://ieeexplore.ieee.org/abstract/document/9723590) on Python
-
-```bash
-cd SPL-fig4
-python dms_spl_fig4.py
-```
-  
-Running [Home et al.](https://iopscience.iop.org/article/10.1088/0266-5611/31/11/115011/pdf?casa_token=1EtwyHOFYqIAAAAA:7KNljR8MVKVeHvoB3wqw1eWDDzgYFHc860UrQ7bm69d6MpeA5UU9fHkUdCgLsC4uKAXoOfbwWzC2) on matlab
-
-```bash
-cd SPL-fig4
-matlab -nodisplay -r "./setPath ; exit"
-matlab -nodisplay -r "./hohm_ggs ; exit"
-```
- <img align="center" width="1500" src="https://github.com/HoangTrieuVy/GGS-DMS/blob/main/SPL-fig4/Screenshot%202022-10-18%20032114.png" >
-</details>
-
-<details open>
-<summary>Comparison of several DMS strategies on several realization of synthetic noisy and blur images. </summary>
- 
-Running [DMS with different schemes](https://ieeexplore.ieee.org/abstract/document/9723590) on Python
-
-```bash
-cd SPL-fig5
-python dms_ggs # running different schemes on dms
-python trof_ggs # TV and T-ROF 
-```
-  
-Running [Hohm et al.](https://iopscience.iop.org/article/10.1088/0266-5611/31/11/115011/pdf?casa_token=1EtwyHOFYqIAAAAA:7KNljR8MVKVeHvoB3wqw1eWDDzgYFHc860UrQ7bm69d6MpeA5UU9fHkUdCgLsC4uKAXoOfbwWzC2) on matlab
-
-```bash
-cd SPL-fig5
-matlab -nodisplay -r "./setPath ; exit"
-matlab -nodisplay -r "./hohm_ggs ; exit"
-```
- <img align="center" width="1500" src="https://github.com/HoangTrieuVy/GGS-DMS/blob/main/SPL-fig5/Screenshot%202022-10-18%20032056.png" >
-</details>
-
-<details open>
-  
-  
-<summary>Comparison of several DMS strategies on real images from BSDS500 dataset.</summary>
-
-Running [DMS with different schemes](https://ieeexplore.ieee.org/abstract/document/9723590) on Python
-```bash
-cd SPL-fig6
-python dms_real_std_0_05
-python trof_ggs_real_std_0_05
-```
-Running [Hohm et al.](https://iopscience.iop.org/article/10.1088/0266-5611/31/11/115011/pdf?casa_token=1EtwyHOFYqIAAAAA:7KNljR8MVKVeHvoB3wqw1eWDDzgYFHc860UrQ7bm69d6MpeA5UU9fHkUdCgLsC4uKAXoOfbwWzC2) on matlab
-
-```bash
-cd SPL-fig6
-matlab -nodisplay -r "./setPath ; exit"
-matlab -nodisplay -r "./hohm_figure6_std_0_05 ; exit"
-```
- <img align="center" width="1500" src="https://github.com/HoangTrieuVy/GGS-DMS/blob/main/SPL-fig6/Screenshot%202022-10-18%20031023.png" >
-
-</details>
-
-
-
