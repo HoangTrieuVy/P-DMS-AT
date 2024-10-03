@@ -23,8 +23,9 @@ pip install -r requirements.txt  # install
 <summary>Denoisers</summary>
 Denoising with discrete Mumford-Shah functional:
 
-$$\min_{x,e} \frac{1}{2} \Vert A x - z \Vert_2^2 + \beta \Vert (1-e)\odot Dx \Vert_2^2 + \lambda h(e)$$
-
+```math
+\min_{x,e} \frac{1}{2} \Vert A x - z \Vert_2^2 + \beta \Vert (1-e)\odot Dx \Vert_2^2 + \lambda h(e)$$
+```
  
  Remarks:
  * Input degraded images can be in standard image format (.png, .jpeg,...)  or .mat file (where the noisy image shuld be denoted by 'z').
