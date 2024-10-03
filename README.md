@@ -47,8 +47,10 @@ optional arguments:
   --algo ALGO  PALM, SLPAM,PALM-eps-descent,SLPAM-eps-descent
   --norm NORM  l1, AT
   --eps EPS    epsilon in the Ambrosio-Tortorelli penalization
-  --eps EPS    minimum epsilon when using AT eps decreasing to 0 
+  --eps_AT_min EPS    minimum epsilon when using AT eps decreasing to 0 
   --it IT      number of iteration
+  --color      'grayscale' or 'color'
+  --edges      'similar' or 'distinct' edges for 3 channels color images 
  ```
  
 ```bash
