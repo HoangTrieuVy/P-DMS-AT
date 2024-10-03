@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ebf27317-24bd-4c13-bbca-a55733109085" name="1">
+        <fileTransfer rootFolder="/projects/Sirocco/2021_TrieuVy" accessType="SFTP" host="localhost" port="4000" sshConfigId="e01ff5ff-abed-4a90-91bc-48d0171315a3" sshConfig="hole01@localhost:4000:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
